@@ -44,9 +44,9 @@ module.exports = (robot) ->
             discobot.setApi api
         msg.send 'Discobot API set to: ' + api
 
-    robot.respond /(^|\s+)alom(\s+|$)/i, (msg) ->
+    robot.hear /(^|\s+)alom(\s+|$)/i, (msg) ->
         discobot.sendMode 'd', (err, res, body)->
             if err
-                msg.send 'Couldn\'t find the party :-('
+                msg.send 'Adaptive Party Interface not available :-('
             else
-                msg.send '/me Disco!'
+                msg.send 'Disco! :tada:'
